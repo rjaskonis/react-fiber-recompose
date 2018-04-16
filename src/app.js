@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import connect from "app/HOC/connect";
+import Test from './example-3';
 
 @connect
 export default class App extends Component {
@@ -20,8 +21,9 @@ export default class App extends Component {
             <div style={{ textAlign:'center', padding:'26px' }}>
                 <span>Edit src/app.js {this.props.context.state.message} =})</span> 
                 <br/>
-                <span>Counter: { this.props.context.state.counter } </span>
-                <button onClick={e => this.props.context.setState({ counter: (this.props.context.state.counter || 0) + 1 })}>Increment</button>
+                {/* <span>Counter: { this.props.context.state.counter } </span>
+                <button onClick={e => this.props.context.setState({ counter: (this.props.context.state.counter || 0) + 1 })}>Increment</button> */}
+                <Test />
             </div>
         );
     }
